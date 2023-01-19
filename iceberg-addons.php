@@ -11,19 +11,19 @@
  * Plugin Name:       Iceberg AddOns
  * Plugin URI:        https://www.icebergwebdesign.com/
  * Description:       Iceberg AddOns
- * Version:           1.0.0
+ * Version:           1.1.0
  * Requires at least: 5.8
  * Requires PHP:      7.4
  * Author:            Iceberg Web Design
  * Author URI:        https://www.icebergwebdesign.com
- * Text Domain:       iwd-connect
+ * Text Domain:       iceberg-addons
  * License:           GPL v2 or later
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Update URI:        https://icebergwebdesign.com/
  *
  * @github-updater
- * GitHub Plugin URI: icebergwebdesign/iwd-connect
- * GitHub Plugin URI: https://github.com/icebergwebdesign/iwc-connect
+ * GitHub Plugin URI: icebergwebdesign/iceberg-addons
+ * GitHub Plugin URI: https://github.com/icebergwebdesign/iceberg-addons
  * Primary Branch: main
  */
 
@@ -44,3 +44,5 @@ define( 'ICEBERG_ADDONS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
  * One file for specific features, not necessarily 1 function.
  */
 include_once ICEBERG_ADDONS_PLUGIN_DIR . 'includes/dashboard-widget.php';
+include_once ICEBERG_ADDONS_PLUGIN_DIR . 'includes/git-updater-check.php';
+include_once ICEBERG_ADDONS_PLUGIN_DIR . 'includes/git-updater-setting.php';
