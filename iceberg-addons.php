@@ -11,7 +11,7 @@
  * Plugin Name:       Iceberg AddOns
  * Plugin URI:        https://www.icebergwebdesign.com/
  * Description:       Iceberg AddOns
- * Version:           1.1.0
+ * Version:           1.2.0
  * Requires at least: 5.8
  * Requires PHP:      7.4
  * Author:            Iceberg Web Design
@@ -46,3 +46,4 @@ define( 'ICEBERG_ADDONS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 include_once ICEBERG_ADDONS_PLUGIN_DIR . 'includes/dashboard-widget.php';
 include_once ICEBERG_ADDONS_PLUGIN_DIR . 'includes/git-updater-check.php';
 include_once ICEBERG_ADDONS_PLUGIN_DIR . 'includes/git-updater-setting.php';
+include_once ICEBERG_ADDONS_PLUGIN_DIR . 'includes/freshdesk-widget.php';
