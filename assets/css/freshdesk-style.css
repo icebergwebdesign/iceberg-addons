@@ -1,0 +1,12 @@
+#freshworks-container iframe#launcher-frame{
+    transform: rotate(270deg) !important;        
+}
+
+@media only screen and (min-device-width: 668px), screen and (min-width: 451px){
+    #freshworks-container iframe#launcher-frame{
+        right: -56px !important;
+    }
+    #freshworks-container div#freshworks-frame-wrapper{
+        right:56px !important;
+    }
+}

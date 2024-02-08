@@ -11,7 +11,7 @@
  * Plugin Name:       Iceberg AddOns
  * Plugin URI:        https://www.icebergwebdesign.com/
  * Description:       Iceberg AddOns
- * Version:           1.2.0
+ * Version:           1.2.1
  * Requires at least: 5.8
  * Requires PHP:      7.4
  * Author:            Iceberg Web Design
