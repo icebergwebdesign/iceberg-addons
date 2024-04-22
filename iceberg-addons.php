@@ -45,5 +45,5 @@ define( 'ICEBERG_ADDONS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
  */
 include_once ICEBERG_ADDONS_PLUGIN_DIR . 'includes/dashboard-widget.php';
 include_once ICEBERG_ADDONS_PLUGIN_DIR . 'includes/git-updater-check.php';
-/*include_once ICEBERG_ADDONS_PLUGIN_DIR . 'includes/git-updater-setting.php';*/
+include_once ICEBERG_ADDONS_PLUGIN_DIR . 'includes/git-updater-setting.php';
 include_once ICEBERG_ADDONS_PLUGIN_DIR . 'includes/freshdesk-widget.php';

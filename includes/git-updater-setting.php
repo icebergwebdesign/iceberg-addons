@@ -12,9 +12,9 @@
 add_filter( 'gu_set_options',
     function () {
         return array( 
-            'github_access_token' => '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',
-            'iceberg-addons'    => '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',
-            'iceberg-custom-elements'    => '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',
-            'custom-swatches-for-iris-color-picker'    => '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',
+            'github_access_token' => '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',
+            'iceberg-addons'    => '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',
+            'iceberg-custom-elements'    => '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',
+            'custom-swatches-for-iris-color-picker'    => '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',
         );
     } );
