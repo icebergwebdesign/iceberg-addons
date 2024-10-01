@@ -10,8 +10,8 @@
  * @wordpress-plugin
  * Plugin Name:       Iceberg AddOns
  * Plugin URI:        https://www.icebergwebdesign.com/
- * Description:       Iceberg AddOns
- * Version:           1.2.7
+ * Description:       Iceberg AddOns Plugin
+ * Version:           2.0.0
  * Requires at least: 5.8
  * Requires PHP:      7.4
  * Author:            Iceberg Web Design
@@ -32,18 +32,21 @@
  * PHP version check and exit.
 */
 
-if ( ! defined( 'WPINC' ) ) {
-	die;
+
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly.
 }
 
-define( 'ICEBERG_ADDONS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-define( 'ICEBERG_ADDONS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+// Define plugin constants
+define( 'ICEBERG_ADDONS_VERSION', '1.0.0' );
+define( 'ICEBERG_ADDONS_DIR', plugin_dir_path( __FILE__ ) );
+define( 'ICEBERG_ADDONS_URL', plugin_dir_url( __FILE__ ) );
 
-/*
- * Call specific file.
- * One file for specific features, not necessarily 1 function.
- */
-include_once ICEBERG_ADDONS_PLUGIN_DIR . 'includes/dashboard-widget.php';
-include_once ICEBERG_ADDONS_PLUGIN_DIR . 'includes/git-updater-check.php';
-include_once ICEBERG_ADDONS_PLUGIN_DIR . 'includes/git-updater-setting.php';
-include_once ICEBERG_ADDONS_PLUGIN_DIR . 'includes/freshdesk-widget.php';
+// Include custom autoloader
+require_once ICEBERG_ADDONS_DIR . 'src/Core/autoload.php';
+
+// Load the core plugin class
+if ( class_exists( 'IcebergAddons\\Core\\Loader' ) ) {
+    $plugin = new IcebergAddons\Core\Loader();
+    $plugin->run();
+}

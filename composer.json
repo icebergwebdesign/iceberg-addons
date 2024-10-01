@@ -1,0 +1,13 @@
+{
+    "name": "icebergwebdesign/iceberg-addons",
+    "description": "A plugin for WordPress that provides custom dashboard widgets and settings pages.",
+    "type": "wordpress-plugin",
+    "autoload": {
+        "psr-4": {
+            "IcebergAddons\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.4"
+    }
+}
