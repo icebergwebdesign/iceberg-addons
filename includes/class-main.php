@@ -97,6 +97,7 @@ class Iceberg_Addons_Main {
      * Add the main Iceberg Web Design menu
      */
     public function add_main_menu() {
+        // Add main menu
         add_menu_page(
             'Iceberg Web Design',
             'Iceberg',
@@ -104,7 +105,17 @@ class Iceberg_Addons_Main {
             'iceberg-web-design',
             [$this, 'render_main_page'],
             $this->get_menu_icon(),
-            30
+            99
+        );
+
+        // Add Home submenu that links to the same page
+        add_submenu_page(
+            'iceberg-web-design', // Parent slug
+            'Iceberg Web Design',               // Page title
+            'Iceberg Web Design',               // Menu title
+            'manage_options',     // Capability
+            'iceberg-web-design', // Menu slug (same as parent)
+            [$this, 'render_main_page']
         );
 
         // Add custom CSS to style the menu icon like a Dashicon
