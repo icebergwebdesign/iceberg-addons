@@ -1,0 +1,115 @@
+/* Admin-wide styles for Iceberg AddOns */
+
+/* Common utility classes */
+.iceberg-hidden {
+    display: none;
+}
+
+.iceberg-text-center {
+    text-align: center;
+}
+
+/* Admin notice styling */
+.iceberg-notice {
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+
+.iceberg-notice--success {
+    background-color: #ecf7ed;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.iceberg-notice--error {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+h1,h2,h3,h4,h5,h6{
+    line-height: 1.2;
+}
+.icebergaddons-wrapper{
+    padding: 80px 40px;
+}
+
+.icebergaddons-header, .icebergaddons-content {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+.icebergaddons-content {    
+    display: grid;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.icebergaddons-card {
+    padding: 30px 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+.icebergaddons-card--full {
+    grid-column: span 4;
+}
+.icebergaddons-card--half {
+    grid-column: span 2;
+}
+
+/* RSS Feed Styles */
+.rss-widget ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.rss-widget li {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.rss-widget li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.rss-widget .rsswidget {
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 5px;
+    color: #2271b1;
+}
+
+.rss-widget .rss-date {
+    display: block;
+    color: #646970;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.rss-widget .rss-summary {
+    color: #50575e;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media only screen and (max-width: 950px) {
+    .icebergaddons-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .icebergaddons-card--full {
+        grid-column: auto;
+    }
+}
+@media only screen and (max-width: 950px) {
+    .icebergaddons-content {
+        grid-template-columns: 1fr;
+    }
+}

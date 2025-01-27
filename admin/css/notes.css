@@ -1,0 +1,273 @@
+/**
+ * Notes styles for Iceberg AddOns
+ */
+
+/* Panel Layout */
+#iceberg-notes-panel {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    max-height: 100vh;
+    background-color: #fff;
+    border-left: 1px solid #ccc;
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    z-index: 9999;
+    padding: 20px;
+    overflow-y: auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.has-visible-admin-bar #iceberg-notes-panel {
+    margin-top: 32px;
+}
+
+#iceberg-notes-panel.open {
+    transform: translateX(0);
+}
+
+/* Close Button */
+.iceberg-notes-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.iceberg-notes-close-button:hover {
+    color: #000;
+}
+
+/* Content Area */
+.iceberg-notes-content {
+    padding-top: 20px;
+}
+
+.iceberg-notes-content h2 {
+    margin: 0 0 20px;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #23282d;
+}
+
+/* Form Styles */
+#iceberg-notes-form {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #23282d;
+}
+
+.iceberg-notes-input,
+.wp-editor-area {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.iceberg-notes-input:focus,
+.wp-editor-area:focus {
+    border-color: #0073aa;
+    box-shadow: 0 0 0 1px #0073aa;
+    outline: none;
+}
+
+/* Editor Styles */
+.wp-editor-container {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.wp-editor-tools {
+    padding: 5px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Button Styles */
+.iceberg-notes-add-button,
+.iceberg-note-save,
+.iceberg-note-cancel {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.iceberg-notes-add-button,
+.iceberg-note-save {
+    background-color: #0073aa;
+    color: #fff;
+}
+
+.iceberg-notes-add-button:hover,
+.iceberg-note-save:hover {
+    background-color: #005177;
+}
+
+.iceberg-note-cancel {
+    background-color: #f1f1f1;
+    color: #23282d;
+    margin-left: 10px;
+}
+
+.iceberg-note-cancel:hover {
+    background-color: #ddd;
+}
+
+/* Notes List */
+.iceberg-notes-list {
+    margin-top: 20px;
+}
+
+.iceberg-note {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.iceberg-note-header {
+    padding: 12px 15px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.iceberg-note-title {
+    font-weight: 600;
+    color: #23282d;
+}
+
+.iceberg-note-timestamp {
+    font-size: 12px;
+    color: #666;
+}
+
+.iceberg-note-body {
+    display: none;
+    padding: 15px;
+}
+
+.iceberg-note.expanded .iceberg-note-body {
+    display: block;
+}
+
+.iceberg-note-content {
+    color: #444;
+    line-height: 1.5;
+}
+
+.iceberg-note-meta {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.iceberg-note-author {
+    color: #666;
+}
+
+.iceberg-note-actions a {
+    color: #0073aa;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.iceberg-note-actions a:hover {
+    color: #005177;
+    text-decoration: underline;
+}
+
+/* Edit Mode */
+.iceberg-note.editing .iceberg-note-header {
+    background: #fff;
+}
+
+.iceberg-note-edit-form {
+    padding: 15px;
+}
+
+.iceberg-note-edit-title {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.iceberg-note-edit-actions {
+    margin-top: 15px;
+    text-align: right;
+}
+
+/* Loading and Error States */
+.iceberg-notes-loading,
+.iceberg-notes-error,
+.iceberg-notes-empty {
+    padding: 20px;
+    text-align: center;
+    color: #666;
+}
+
+.iceberg-notes-error {
+    color: #dc3232;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 782px) {
+    #iceberg-notes-panel {
+        width: 100%;
+    }
+
+    .has-visible-admin-bar #iceberg-notes-panel {
+        margin-top: 46px;
+    }
+}
+
+/* WordPress Admin Bar Icon */
+#wpadminbar #wp-admin-bar-iceberg-notes .ab-icon:before {
+    content: '\f119';
+    top: 2px;
+}
+
+/* Block Editor Integration */
+.components-button.has-icon.iceberg-notes-sidebar-button {
+    display: flex;
+    align-items: center;
+}
+
+.components-button.has-icon.iceberg-notes-sidebar-button svg {
+    margin-right: 5px;
+}

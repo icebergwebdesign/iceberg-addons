@@ -1,13 +1,15 @@
 <?php
+/**
+ * The blog dashboard widget functionality.
+ *
+ * @package    IcebergAddOns
+ */
 
-namespace IcebergAddons\Admin;
-
-class IcebergBlogWidget {
-
+class Iceberg_Blog_Dashboard_Widget {
     /**
      * Registers the Iceberg Blog widget.
      */
-    public static function register_blog_widget() {
+    public static function register_blog_dashboard_widget() {
         wp_add_dashboard_widget(
             'iceberg_blog_widget',
             'Iceberg Web Design Blog',
@@ -15,7 +17,7 @@ class IcebergBlogWidget {
         );
 
         // Move this widget to the second position
-        HelpDashboardWidget::move_widget_to_position('iceberg_blog_widget', 2);
+        Iceberg_Help_Dashboard_Widget::move_widget_to_position('iceberg_blog_widget', 2);
     }
 
     /**
