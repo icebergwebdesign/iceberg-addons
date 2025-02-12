@@ -33,8 +33,10 @@ class Iceberg_Addons_Loader {
     /**
      * Register the stylesheets for the public-facing side of the site.
      */
+    /* disabled for now
     public function enqueue_public_assets() {
         wp_enqueue_style('iceberg-addons-public', ICEBERG_ADDONS_URL . 'public/css/public.css', [], ICEBERG_ADDONS_VERSION);
         wp_enqueue_script('iceberg-addons-public', ICEBERG_ADDONS_URL . 'public/js/public.js', ['jquery'], ICEBERG_ADDONS_VERSION);
     }
+    */
 }
