@@ -19,7 +19,9 @@ class Iceberg_Addons_Loader {
      */
     public function add_actions() {
         add_action('admin_enqueue_scripts', [$this, 'enqueue_admin_assets']);
+        /* disabled for now
         add_action('wp_enqueue_scripts', [$this, 'enqueue_public_assets']);
+        */
     }
 
     /**

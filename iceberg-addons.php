@@ -3,7 +3,7 @@
  * Plugin Name: Iceberg AddOns
  * Plugin URI:  https://www.icebergwebdesign.com/
  * Description: Iceberg AddOns plugin for Iceberg Web Design's client
- * Version:     3.0.3
+ * Version:     3.0.4
  * Author:      Iceberg Web Design
  * Author URI:  https://www.icebergwebdesign.com
  * License:     GPL v2 or later

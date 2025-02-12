@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+
+## [3.0.4] - 2025-02-12
+Disabled enqueue_public_assets
+
 ## [3.0.3] - 2025-02-12
 Changed version number to the plugin main file.
 
